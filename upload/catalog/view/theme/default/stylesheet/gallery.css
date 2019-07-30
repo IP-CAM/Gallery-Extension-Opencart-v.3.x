@@ -1,0 +1,39 @@
+.card-columns {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 2.25rem;
+  -mox-column-gap: 2.25rem;
+  column-gap: 2.25rem;
+}
+.card-columns .card {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2.25rem;
+}
+.card-image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card-image:hover {
+  opacity: 0.85;
+}
+.card-title {
+  font-size: 13px;
+  margin-top: 12px;
+  margin-left: 6px;
+}
+
+@media (max-width: 767px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 1.25rem;
+    -mox-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+  }
+  .card-columns .card {
+    margin-bottom: 1.25rem;
+  }
+}

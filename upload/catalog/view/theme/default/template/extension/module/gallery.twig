@@ -1,0 +1,22 @@
+<div class="gallery">
+  <div class="card-columns">
+    {% for image in images %}
+      <div class="card">
+        <div class="card-image">
+          {% if image.link %}
+          <a href="{{ image.link }}">
+            <img src="{{ image.thumb }}" alt="{% if image.title %}{{ image.title }}{% endif %}" class="img-responsive">
+          </a>
+          {% else %}
+          <img src="{{ image.thumb }}" alt="{% if image.title %}{{ image.title }}{% endif %}" class="img-responsive">
+          {% endif %}
+        </div>
+        <div class="card-block">
+          {% if image.title %}
+            <div class="card-title">{{ image.title }}</div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
